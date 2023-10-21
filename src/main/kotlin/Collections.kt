@@ -1,3 +1,5 @@
+
+data class Recipe(var name: String)
 fun main(){
 
     //List
@@ -30,6 +32,31 @@ fun main(){
     println("mShoppingSet items added: $mShoppingSet")
     mShoppingList = mShoppingSet.toMutableList()
     println("mShoppingList new Version: $mShoppingList")
+
+
+
+    //Section ------ Map
+
+    println("-------------------Map Start Here---------------------------")
+
+    val r1 = Recipe("Chicken Soup")
+    val r2 = Recipe("Quinoa Salad")
+    val r3 = Recipe("Thai Curry")
+    val r4 = Recipe("Jambalya")
+    val r5 = Recipe("Sausage Rolls")
+
+    val mRecipeMap = mutableMapOf("Receipe1" to r1, "Receipe2" to r2, "Recipe3" to r3)
+    println("mRecipeMap original: $mRecipeMap")
+
+    val recipesToAdd = mapOf("Recipe4" to r4, "Recipe5" to r5)
+    mRecipeMap.putAll(recipesToAdd)
+    println("mRecipeMap updated: $mRecipeMap")
+    if (mRecipeMap.containsKey("Recipe1")) {
+        println("Recipe1 is: ${mRecipeMap.getValue("Recipe1")}")}
+
+
+
+
 
 
 
